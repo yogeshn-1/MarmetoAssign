@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: white;
+}
+a {
+  display: inline-block;
+  color: lightgrey;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  white-space: nowrap;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.23);
+  color: white;
+  transform: scale(1.03);
+  text-decoration: none;
+}
+a:active {
+  transform: scale(0.98);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.tab-switch {
+  display: flex;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  justify-content: center;
+  border-radius: 10px;
+  background: #f2f2f2;
+}
+
+.tab-switch > div {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .product-container {
+    flex-direction: column;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  background-color: burlywood;
+}
