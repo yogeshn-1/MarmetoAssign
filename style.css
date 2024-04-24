@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 html,
 body {
   height: 100%;
@@ -37,6 +46,7 @@ a:active {
   max-width: 1280px;
   margin: 2rem auto;
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 .tab-switch {
@@ -59,6 +69,7 @@ a:active {
   display: flex;
   gap: 4rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 767px) {
@@ -68,8 +79,28 @@ a:active {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
+  gap: 5px;
   padding: 5px;
-  background-color: burlywood;
+  margin: auto;
+}
+
+.card img {
+  object-fit: cover;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 2px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  border-radius: 3px;
+  background-color: white;
+  padding: 2px 5px;
+  font-size: small;
 }
