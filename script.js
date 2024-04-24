@@ -3,17 +3,13 @@ async function fetchProducts() {
     "https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json"
   );
   products = await response.json();
-  console.log(products);
   productCategories = await products.categories;
-  console.log(products);
   selectProductCategory("Men");
 }
 
 async function displayProducts(items) {
   const container = document.querySelector(".product-container");
   container.innerHTML = "";
-  console.log("In display products");
-  console.log(items);
   items.forEach((item) => {
     const div = document.createElement("div");
     div.setAttribute("class", "card");
@@ -44,11 +40,9 @@ async function displayProducts(items) {
 function selectProductCategory(category) {
   const selctedCat = document.getElementById(category);
   changeBackground(selctedCat);
-  console.log(productCategories);
   const filteredProducts = productCategories.filter(
     (product) => product.category_name === category
   );
-  console.log(filteredProducts);
   showProduct = filteredProducts[0].category_products;
   displayProducts(showProduct);
 }
