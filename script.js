@@ -6,7 +6,7 @@ async function fetchProducts() {
   console.log(products);
   productCategories = await products.categories;
   console.log(products);
-  selectProducts("Men");
+  selectProductCategory("Men");
 }
 
 async function displayProducts(items) {
@@ -41,7 +41,7 @@ async function displayProducts(items) {
   });
 }
 
-function selectProducts(category) {
+function selectProductCategory(category) {
   const selctedCat = document.getElementById(category);
   changeBackground(selctedCat);
   console.log(productCategories);

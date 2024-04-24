@@ -145,9 +145,18 @@ a:active {
   cursor: pointer;
   transition: all 300ms;
   border-radius: 5px;
+  align-items: center;
+}
+
+.category_button img {
+  display: none;
 }
 
 .category_button.active {
   background-color: black;
   color: white;
+}
+.category_button.active img {
+  display: initial;
+  margin: 0 2px;
 }
