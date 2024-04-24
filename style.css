@@ -67,9 +67,11 @@ a:active {
 
 .product-container {
   display: flex;
-  gap: 4rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 1024px;
+  margin: auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -90,8 +92,22 @@ a:active {
 .card img {
   object-fit: cover;
   margin: 0 auto;
-  position: relative;
   border-radius: 2px;
+}
+
+.card button {
+  padding: 5px;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: all 500ms;
+}
+
+.card button:hover {
+  background-color: black;
+  color: white;
 }
 
 .badge {
@@ -103,4 +119,15 @@ a:active {
   background-color: white;
   padding: 2px 5px;
   font-size: small;
+}
+
+.compare_price {
+  text-decoration: line-through;
+  color: gray;
+}
+.product_name {
+  max-width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

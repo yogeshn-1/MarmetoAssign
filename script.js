@@ -24,8 +24,17 @@ async function displayProducts(items) {
         : ""
     }
     <img src=${item.image} width="220px" height="280px">
-    <h3>${item.title}</h3>
-    <p>$${item.price}</p>
+    <div style="display: flex;gap:7px">
+        <h3 class=product_name>${item.title}</h3>
+        <p style="font-size: small;align-self:flex-end;"> &#149; ${
+          item.vendor
+        }</p>
+    </div>
+    <div style="display:flex;gap:10px">
+        <p>Rs ${item.price}</p>
+        <p class="compare_price">${item.compare_at_price}</p>
+        <p style="color:red">50% off</p>
+    </div>
     <button>Add to Cart</button>
     `;
     container.appendChild(div);
