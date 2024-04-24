@@ -4,15 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Coding Assesment L2 boilerplate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Marmeto</title>
   </head>
   <body>
     <div class="container">
       <h2 style="text-align: center; margin: 0">Select Your Choice</h2>
       <section class="tab-switch">
-        <div onclick="selectProducts('Men')" id="Men">Men</div>
-        <div onclick="selectProducts('Women')" id="Women">Women</div>
-        <div onclick="selectProducts('Kids')" id="Kids">Kids</div>
+        <div class="category_button" onclick="selectProducts('Men')" id="Men">
+          Men
+        </div>
+        <div
+          class="category_button"
+          onclick="selectProducts('Women')"
+          id="Women"
+        >
+          Women
+        </div>
+        <div class="category_button" onclick="selectProducts('Kids')" id="Kids">
+          Kids
+        </div>
       </section>
       <section class="product-container"></section>
     </div>

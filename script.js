@@ -42,6 +42,8 @@ async function displayProducts(items) {
 }
 
 function selectProducts(category) {
+  const selctedCat = document.getElementById(category);
+  changeBackground(selctedCat);
   console.log(productCategories);
   const filteredProducts = productCategories.filter(
     (product) => product.category_name === category
@@ -51,4 +53,9 @@ function selectProducts(category) {
   displayProducts(showProduct);
 }
 
+function changeBackground(category) {
+  const categories = document.querySelectorAll(".category_button");
+  categories.forEach((btn) => btn.classList.remove("active"));
+  category.classList.add("active");
+}
 fetchProducts();
