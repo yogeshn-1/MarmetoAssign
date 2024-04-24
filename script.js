@@ -10,7 +10,11 @@ async function fetchProducts() {
 async function displayProducts(items) {
   const container = document.querySelector(".product-container");
   container.innerHTML = "";
+
   items.forEach((item) => {
+    const discountPercentage = Math.round(
+      ((item.compare_at_price - item.price) / item.compare_at_price) * 100
+    );
     const div = document.createElement("div");
     div.setAttribute("class", "card");
     div.innerHTML = `
@@ -29,7 +33,7 @@ async function displayProducts(items) {
     <div style="display:flex;gap:10px">
         <p>Rs ${item.price}</p>
         <p class="compare_price">${item.compare_at_price}</p>
-        <p style="color:red">50% off</p>
+        <p style="color:red">${discountPercentage} %</p>
     </div>
     <button>Add to Cart</button>
     `;
